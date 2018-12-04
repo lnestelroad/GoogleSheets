@@ -26,8 +26,7 @@
 
 #     values = [
 #         [
-#             Sheet1!A1
-#         ]
+#             Sheet1!A1 #         ]
 #     ]
 #     body = {
 #         'values': values
@@ -64,9 +63,9 @@ SHEET_ID = '14NHYlZAGWZctGriND8Vprd1tjnE-PhfpWpFtHQgjero'
 
 ip = (str(sys.argv[1]))
 values = [
-        ['%s' % time.ctime()],
+        ["Hostname", "IP Adress", "Last Update"],
         [],
-        ["Liam's MBP IP:", ip],
+        ["Liam's MBP IP:", ip, time.ctime()],
     ]
 body = {'values': values }
 
