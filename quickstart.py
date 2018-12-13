@@ -48,10 +48,10 @@ from oauth2client import file, client, tools
 pwd = sys.argv[2] + '/'
 
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
-store = file.Storage('/Users/liam/Documents/Code_Projects/Raspberry_Pi/GoogleSheets/storage.json')
+store = file.Storage('/Users/liam/Documents/Code_Projects/Raspberry_Pi/AutoIP/storage.json')
 creds = store.get()
 if not creds or creds.invalid:
-    flow = client.flow_from_clientsecrets('/Users/liam/Documents/Code_Projects/Raspberry_Pi/GoogleSheets/credentials.json', SCOPES)
+    flow = client.flow_from_clientsecrets('/Users/liam/Documents/Code_Projects/Raspberry_Pi/AutoIP/credentials.json', SCOPES)
     creds = tools.run_flow(flow, store)
 SHEETS = discovery.build('sheets', 'v4', http=creds.authorize(Http()))
 
